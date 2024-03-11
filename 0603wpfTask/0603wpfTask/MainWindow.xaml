@@ -1,0 +1,44 @@
+﻿<Window x:Class="_0603wpfTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_0603wpfTask"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>      
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width =".1*"/>
+            <ColumnDefinition Width=".1*"/>
+            <ColumnDefinition Width=".1*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="Aquamarine"/>
+        <Rectangle Grid.Column="1" Fill="PaleTurquoise"/>
+        <Rectangle Grid.Column="2" Fill="ForestGreen"/>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Column="0" Grid.Row="0"/> <!--Table num-->
+            <Calendar Grid.Column="1" Grid.Row="1"/> <!--Date-->
+            <TextBox Grid.Column="2" Grid.Row="2"/> <!--People-->
+            <Button Content="Create reservation" Grid.Column="0" Grid.Row="3"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Calendar/>
+            <TextBox Grid.Row ="1"/>
+            <Button Content="Check reservation date" Grid.Row="2"/>            
+        </Grid>
+        <Grid Grid.Column="2">
+            <TextBlock Text="Existing reservations"/>
+        </Grid>
+    </Grid>
+</Window>
